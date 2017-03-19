@@ -1,0 +1,154 @@
+{
+	"type": "NetIOConfiguration",
+	"version": 2,
+	"connections": [
+		{
+			"name": "connection",
+			"host": "192.168.0.101",
+			"port": 3200,
+			"protocol": "http"
+		}
+	],
+	"pages": [
+		{
+			"name": "page",
+			"label": "page",
+			"connection": "connection",
+			"fitToScreen": true,
+			"items": [
+				{
+					"top": 20,
+					"left": 60,
+					"width": 100,
+					"height": 100,
+					"type": "button",
+					"label": "newButton",
+					"shape": "circle",
+					"background": "45,45,45",
+					"border": "70,70,70",
+					"textcolor": "230,230,230",
+					"icon": "standby",
+					"sends": [
+						"/gpio0"
+					]
+				},
+				{
+					"top": 130,
+					"left": 60,
+					"width": 100,
+					"height": 100,
+					"type": "button",
+					"label": "newButton",
+					"shape": "circle",
+					"background": "45,45,45",
+					"border": "70,70,70",
+					"textcolor": "230,230,230",
+					"icon": "standby",
+					"sends": [
+						"/gpio2"
+					]
+				},
+				{
+					"top": 240,
+					"left": 60,
+					"width": 100,
+					"height": 100,
+					"type": "button",
+					"label": "newButton",
+					"shape": "circle",
+					"background": "45,45,45",
+					"border": "70,70,70",
+					"textcolor": "230,230,230",
+					"icon": "standby",
+					"sends": [
+						"/gpio12"
+					]
+				},
+				{
+					"top": 350,
+					"left": 60,
+					"width": 100,
+					"height": 100,
+					"type": "button",
+					"label": "newButton",
+					"shape": "circle",
+					"background": "45,45,45",
+					"border": "70,70,70",
+					"textcolor": "230,230,230",
+					"icon": "standby",
+					"sends": [
+						"/gpio14"
+					]
+				},
+				{
+					"top": 30,
+					"left": 210,
+					"width": 60,
+					"height": 80,
+					"type": "label",
+					"text": "newLabel",
+					"textcolor": "230,230,230",
+					"icon": "lamp_off",
+					"reads": "/estado_salida_1",
+					"interval": 2000,
+					"parseResponse": ".*",
+					"formatResponse": "icon_lamp_{0}.png"
+				},
+				{
+					"top": 140,
+					"left": 210,
+					"width": 60,
+					"height": 80,
+					"type": "label",
+					"text": "newLabel",
+					"textcolor": "230,230,230",
+					"icon": "lamp_off",
+					"reads": "/estado_salida_2",
+					"interval": 2000,
+					"parseResponse": ".*",
+					"formatResponse": "icon_lamp_{0}.png"
+				},
+				{
+					"top": 250,
+					"left": 210,
+					"width": 60,
+					"height": 80,
+					"type": "label",
+					"text": "newLabel",
+					"textcolor": "230,230,230",
+					"icon": "lamp_off",
+					"reads": "/estado_salida_3",
+					"interval": 2000,
+					"parseResponse": ".*",
+					"formatResponse": "icon_lamp_{0}.png"
+				},
+				{
+					"top": 360,
+					"left": 210,
+					"width": 60,
+					"height": 80,
+					"type": "label",
+					"text": "newLabel",
+					"textcolor": "230,230,230",
+					"icon": "lamp_off",
+					"reads": "/estado_salida_4",
+					"interval": 2000,
+					"parseResponse": ".*",
+					"formatResponse": "icon_lamp_{0}.png"
+				}
+			],
+			"width": 320,
+			"height": 480
+		}
+	],
+	"device": "iPhone",
+	"orientation": "portrait",
+	"name": "esp8266 4 led",
+	"description": "prueba de 4 salidas en modulo esp8266",
+	"navigation": "fix",
+	"pagebuttonwidth": "static",
+	"style": "flat",
+	"theme": "dark",
+	"preventSleep": false,
+	"switchOnSwipe": true
+}
